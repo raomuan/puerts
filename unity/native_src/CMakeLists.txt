@@ -176,6 +176,7 @@ elseif ( APPLE )
             target_compile_definitions (puerts PRIVATE PLATFORM_IOS_SIMULATOR)
             message(STATUS "SIMULATOR64 BUILD...")
         else ()
+		    target_compile_definitions (puerts PRIVATE WITH_INSPECTOR)
             target_compile_definitions (puerts PRIVATE PLATFORM_IOS)
         endif ()
 
